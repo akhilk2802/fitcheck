@@ -216,3 +216,36 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---------------------------------------------------------------------------
+# fitcheck: stays local on purpose
+#
+# This repo is public and git history is permanent. A file removed in a later
+# commit is still in the log, so none of the below is ever committed.
+# ---------------------------------------------------------------------------
+
+# Personal photos. Reference shots of a real face and body never go public.
+identity-kit/
+
+# Garment photos are third-party product images; renders are derived from
+# personal reference photos. Neither belongs in a public repo.
+garments/
+experiments/inputs/
+experiments/outputs/
+
+# Design notes: they describe hardware, habits and wardrobe.
+docs/
+
+# Vendored third-party API reference. Not this project's code.
+.agents/
+
+# Local app data, once the app exists.
+media/
+*.db
+*.sqlite3
+
+# Keys live in ~/.fitcheck.env (0600), never in the repo.
+*.env
+!.env.example
+
+.DS_Store
